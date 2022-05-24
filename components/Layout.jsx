@@ -4,7 +4,9 @@ import Hero from "./hero/index";
 import Ads from "./ads/Ads";
 import Beyin from "./beyin/Beyin";
 import Card from "./card/Card";
-import Works from "./work/Works";
+import Price from "./prices/Prices";
+import Work from "./work/Works";
+import Works from "./works/Works"
 import Footer from "./footer/Footer";
 
 import * as location from "./json/1055-world-locations.json";
@@ -55,9 +57,11 @@ function Layout() {
             {/* <Navbar /> */}
             <Hero />
             <Ads />
+            <Works />
             <Beyin />
             <Card />
-            <Works />
+            <Price />
+            <Work />
             <Footer />
           </>
         </>
