@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
     typo: {
       fontStyle: "normal",
-      fontWeight: 400,
+      fontWeight: 300,
       fontSize: "48px",
       lineHeight: "80px",
       /* or 167% */

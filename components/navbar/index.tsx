@@ -26,6 +26,8 @@ const useStyles = makeStyles((theme: Theme) =>
     link: {
       fontFamily: "Poppins",
       textDecoration: "none",
+      fontStyle: "normal",
+      fontWeight: 300,
       color: "#1e2d3d",
       fontSize: "14px",
       lineHeight: "21px",

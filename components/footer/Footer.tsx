@@ -10,6 +10,7 @@ import Logo from "../logo/index";
 const useStyles = makeStyles(() => ({
   box:{
     marginTop:'12rem',
+
   },
   grid: {
     marginTop:'2rem',
@@ -19,6 +20,8 @@ const useStyles = makeStyles(() => ({
   },
   footer: {
     fontSize: "12px",
+    fontFamily: "Poppins",
+    fontStyle: "normal",
     "@media only screen and (max-width: 600px)": {
       fontSize: "9px",
     },
@@ -49,7 +52,7 @@ const Footer = () => {
             </Grid>
             <Grid item xs={4} sm={4} md={4} lg={4}>
               <div>
-                <Link underline="none" href="/contact" color="inherit">
+                <Link underline="none" href="/contact" color="inherit" >
                   Contact us
                 </Link>
               </div>
