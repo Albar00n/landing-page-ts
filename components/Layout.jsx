@@ -1,25 +1,68 @@
+import React, { useEffect, useState } from "react";
+import Lottie from "react-lottie";
+import Hero from "./hero/index";
+import Ads from "./ads/Ads";
+import Beyin from "./beyin/Beyin";
+import Card from "./card/Card";
+import Works from "./work/Works";
+import Footer from "./footer/Footer";
 
-// import Navbar from './navbar/index'
-import Hero from './hero/index'
-import Ads from './ads/Ads'
-import Beyin from './beyin/Beyin'
-import Card from './card/Card'
-import Works from './work/Works'
-import Footer from './footer/Footer'
-function Layout(){
-return (
-<>
+import * as location from "./json/1055-world-locations.json";
 
+const defaultOptions1 = {
+  loop: true,
+  autoplay: true,
+  animationData: location.default,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
 
-{/* <Navbar /> */}
-<Hero />
-<Ads />
-<Beyin />
-<Card />
-<Works />
-<Footer />
-</>
-)
+function Layout() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(undefined);
+  const [completed, setCompleted] = useState(undefined);
 
+  useEffect(() => {
+    setTimeout(() => {
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((response) => response.json())
+        .then((json) => {
+          // console.log(json);
+          setData(json);
+          setLoading(true);
+
+          setTimeout(() => {
+            setCompleted(true);
+          }, 1000);
+        });
+    }, 1000);
+  }, []);
+
+  return (
+    <>
+      {!completed ? (
+        <>
+          {!loading ? (
+            <Lottie options={defaultOptions1} height={200} width={200} />
+          ) : (
+            <Lottie options={defaultOptions1} />
+          )}
+        </>
+      ) : (
+        <>
+          <>
+            {/* <Navbar /> */}
+            <Hero />
+            <Ads />
+            <Beyin />
+            <Card />
+            <Works />
+            <Footer />
+          </>
+        </>
+      )}
+    </>
+  );
 }
 export default Layout;
