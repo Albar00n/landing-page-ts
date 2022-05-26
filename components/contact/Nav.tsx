@@ -23,6 +23,33 @@ const useStyles = makeStyles((theme: Theme) =>
             lineHeight: '21px',
             marginLeft: theme.spacing(7),
           },
+          log: {
+            border: "1px solid #e3e3e3",
+            borderRadius: "14rem",
+            textTransform: "none",
+            fontWeight: 400,
+            // marginLeft: "1rem",
+            fontStyle: "normal",
+            fontSize: "14px",
+            lineHeight: "21px",
+            textDecoration: "none",
+            padding: "8px 3.5rem",
+            color: "#58696d",
+            textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+          },
+
+          get: {
+            // marginLeft: "1rem",
+            border: "1px solid #fff",
+            borderRadius: "24px",
+            textDecoration: "none",
+            padding: "8px 2rem",
+            color: "#1e2d3d",
+            fontStyle: "normal",
+            fontWeight: 300,
+            fontSize: "14px",
+            lineHeight: "21px",
+          },
 }));
 
 
@@ -66,6 +93,12 @@ return(
        <Link href="/">
         <a className={classes.link}>Home</a>
       </Link>
+      <Link href="/">
+                      <a className={classes.get}>Gest Started</a>
+                    </Link>
+            <Link href="https://ebcdb.beyin.me/signup">
+                      <a className={classes.log}>Login</a>
+            </Link>
     </div>
   )}
 </Toolbar>
