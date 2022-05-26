@@ -14,9 +14,9 @@ const useStyles = makeStyles((theme: Theme) =>
         textAlign: 'left',
         margin: '2rem auto',
 
-        '@media only screen and (min-width: 1200px)': {
-              width: '90%'
-          },
+        // '@media only screen and (min-width: 1200px)': {
+        //       width: '90%'
+        //   },
       },
     link: {
             textDecoration: "none",
@@ -46,10 +46,10 @@ const useStyles = makeStyles((theme: Theme) =>
             lineHeight: '24px',
             width: '97%',
             color: '#1e2d3d',
-            "@media only screen and (max-width: 600px)":{
-                width: '100%',
+            // "@media only screen and (max-width: 600px)":{
+            //     width: '100%',
 
-            },
+            // },
           },
           button :{
             marginLeft: '1px',
@@ -61,29 +61,29 @@ const useStyles = makeStyles((theme: Theme) =>
             maxHeight: '100%',
             filter: 'drop-shadow(0px 104px 134px rgba(0, 0, 0, 0.11))',
             borderRadius: '50px',
-            "@media only screen and (max-width: 600px)":{
-                maxWidth: '100%',
-                maxHeight: '100%',
+            // "@media only screen and (max-width: 600px)":{
+            //     maxWidth: '100%',
+            //     maxHeight: '100%',
 
 
-            },
-            '@media only screen and (min-width: 300px)': {
-                  maxHeight: '95%',
-                  maxWidth: '100%',
-               },
+            // },
+            // '@media only screen and (min-width: 300px)': {
+            //       maxHeight: '95%',
+            //       maxWidth: '100%',
+            //    },
             },
           grid: {
             height: '100%',
             width: '80%',
-            "@media only screen and (max-width: 600px)":{
-                height: '100%',
-                width: '100%',
-                borderRadius: '10px',
-                display:'flex',
-                alignItems: 'center',
-                justifyContent: 'flex-end',
-                margin: '2rem 0rem',
-            }
+            // "@media only screen and (max-width: 600px)":{
+            //     height: '100%',
+            //     width: '100%',
+            //     borderRadius: '10px',
+            //     display:'flex',
+            //     alignItems: 'center',
+            //     justifyContent: 'flex-end',
+            //     margin: '2rem 0rem',
+            // }
           }
 }));
 

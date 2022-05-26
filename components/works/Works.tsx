@@ -3,17 +3,15 @@ import { makeStyles } from "@material-ui/core/styles";
 import ImageCard from "../../public/card.png";
 import ImageIphone from "../../public/iPhone.png";
 import Image from "next/image";
-// import style from "../styles/index.module.css";
 
 const useStyles = makeStyles(() => ({
   box: {
     margin: "9rem auto",
     alignItems: "center",
-    "@media only screen and (max-width: 900px) ": {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
+  },
+  grid1: {
+    "@media only screen and (max-width: 600px) ": {
+      margin: "2rem auto",
     },
   },
   typo: {
@@ -22,8 +20,6 @@ const useStyles = makeStyles(() => ({
     fontWeight: 300,
     fontSize: "36px",
     lineHeight: "54px",
-    display: "flex",
-    alignItems: "center",
   },
 
   imgIphone: {
@@ -32,17 +28,9 @@ const useStyles = makeStyles(() => ({
     boxShadow: " 0px 67.6825px 87.2063px rgba(0, 0, 0, 0.11)",
     borderRadius: "2.4rem",
   },
-  card: {
-    "@media only screen and (max-width: 600px)": {
-      margin: "1.4rem 3rem",
-    },
-  },
   imgCard: {
-    background: "#f9fcfd",
-    border: "0.1px solid rgba(37, 45, 56, 0.23)",
     boxShadow: "0px 88.8219px 131.393px -45.7249px rgba(0, 0, 0, 0.14)",
     borderRadius: "5.25573px",
-    width: "70%",
   },
   typo2: {
     display: "flex",
@@ -51,35 +39,23 @@ const useStyles = makeStyles(() => ({
     fontStyle: "normal",
     fontWeight: 300,
     fontSize: "20px",
-    lineHeight: "115%",
-    "@media only screen and (max-width: 600px)": {
-      width: "115%",
-    },
-    "@media only screen and (max-width: 900px)": {
-      width: "115%",
-    },
+    lineHeight: "23px",
+  },
+  typo3: {
+    fontFamily: "Poppins",
+    fontStyle: "normal",
+    fontWeight: 300,
+    fontSize: "20px",
+    lineHeight: "23px",
   },
   gridCard: {
     marginLeft: "1rem",
-  },
-  typoPhone: {
-    "@media only screen and (max-width: 600px)": {
-      margin: "auto 2rem 1rem",
-      width: "80%",
-    },
-    "@media only screen and (max-width: 900px)": {
-      width: "70%",
-    },
-  },
-  tow: {
-    "@media only screen and (max-width: 600px)": {
-      margin: "-1.5rem 4rem",
-    },
   },
 }));
 
 export default function Work() {
   const classes = useStyles();
+
   return (
     <Box className={classes.box} id="work">
       <Box style={{ margin: "3rem auto" }}>
@@ -97,8 +73,8 @@ export default function Work() {
         className={classes.gridCard}
       >
         {/* one card */}
-        <Grid item xs={12} sm={5} md={4} lg={4}>
-          <Grid className={classes.card}>
+        <Grid item xs={12} sm={5} md={4} lg={4} className={classes.grid1}>
+          <Grid>
             <Grid style={{ margin: "1rem 0rem" }}>
               <Typography
                 className={classes.typo2}
@@ -109,7 +85,7 @@ export default function Work() {
                   style={{ margin: " 1rem 5rem" }}
                   className={classes.typo2}
                 >
-                  Using your phone <br /> scan the QR code.
+                  Using your phone scan the QR code.
                 </Typography>
               </Typography>
             </Grid>
@@ -139,27 +115,19 @@ export default function Work() {
                 <Grid item xs={4}>
                   <Typography
                     style={{ fontSize: "4rem", margin: "-22px 14px" }}
-                    className={classes.tow}
                   >
                     2
                   </Typography>
                 </Grid>
                 <Grid item xs={8} sm={8} md={8} lg={6}>
-                  <Typography variant="body1" className={classes.typoPhone}>
+                  <Typography variant="body1" className={classes.typo3}>
                     Click on start, then allow the camera to scan the card.
                   </Typography>
                 </Grid>
               </Grid>
             </Grid>
-            <Grid
-              item
-              sm={8}
-              md={10}
-              lg={10}
-              style={{ margin: "2.5rem 1rem" }}
-              className={classes.typoPhone}
-            >
-              <Typography>
+            <Grid item sm={8} md={10} lg={10} style={{ margin: "2.5rem 1rem" }}>
+              <Typography className={classes.typo3}>
                 The website will recognize the card and show the Extended
                 Business Card.
               </Typography>

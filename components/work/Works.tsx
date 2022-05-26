@@ -25,24 +25,13 @@ const useStyles = makeStyles((theme: Theme) =>
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      "@media only screen and (max-width: 300px)": {
-        width: "100%",
-        border: "1px solid red",
-        // margin:"0rem -1rem",
-      },
+
       "@media only screen and (max-width: 700px)": {
-        width: "100%",
+        width: "94%",
         margin: "0rem 1.5rem",
       },
-      "@media only screen and (max-width: 993px)": {
-        width: "100%",
-        margin: "0rem 2rem",
-      },
-      "@media only screen and (max-width: 1200px)": {
-        width: "90%",
 
-        margin: "0rem 3rem",
-      },
+
     },
     card: {
       display: "flex",

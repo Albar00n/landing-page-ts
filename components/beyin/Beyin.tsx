@@ -21,7 +21,9 @@ const useStyles = makeStyles((theme: Theme) =>
     display: 'flex',
     justifyContent: 'left',
     alignItems: 'center',
-
+// "@media only screen and (max-width: 590px)":{
+// width:"30%"
+// },
   },
   box1: {
     width: '85%',
@@ -39,19 +41,20 @@ const useStyles = makeStyles((theme: Theme) =>
     color: '#252d38',
     fontWeight: 400,
     fontSize: '28px',
-  
-    "@media only screen and (max-width: 600px)":{
-width:"102%"
-    },
-    '@media only screen and (max-width: 768px)' :{
-      width:"80%",
-    },
-    "@media only screen and (min-width: 992px)":{
-      width:"100%",
-    },
-    "@media only screen and (min-width: 1200px)":{
-      width:"100%",
-    }
+
+//     "@media only screen and (max-width: 600px)":{
+// maxWidth:"112%",
+// border:"1px solid"
+//     },
+//     '@media only screen and (max-width: 768px)' :{
+//       width:"80%",
+//     },
+//     "@media only screen and (min-width: 992px)":{
+//       width:"100%",
+//     },
+//     "@media only screen and (min-width: 1200px)":{
+//       width:"100%",
+//     }
     },
     typo2: {
       textAlign: 'left',
@@ -62,12 +65,12 @@ width:"102%"
       color: '#252d38',
       fontWeight: 400,
       fontSize: '16px',
-      '@media only screen and (max-width: 600px)' :{
-        width: '90%',
-      },
-      "@media only screen and (max-width: 768px)":{
-        width: '80%'
-      }
+      // '@media only screen and (max-width: 600px)' :{
+      //   width: '90%',
+      // },
+      // "@media only screen and (max-width: 768px)":{
+      //   width: '80%'
+      // }
       },
 
 

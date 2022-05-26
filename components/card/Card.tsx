@@ -11,9 +11,7 @@ import Link from "next/link";
 const useStyles = makeStyles(() => ({
   box: {
     margin: "10rem auto",
-    "@media only screen and (max-width: 590px)": {
-      width: "110%",
-    },
+   
     "@media only screen and (max-width: 1200px)": {
       width: "90%",
     },
