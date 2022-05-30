@@ -5,6 +5,7 @@ import Ads from "./ads/Ads";
 import Beyin from "./beyin/Beyin";
 import Card from "./card/Card";
 import Price from "./prices/Prices";
+// import Cards from "./prices/Card";
 import Work from "./work/Works";
 import Works from "./works/Works"
 import Footer from "./footer/Footer";
@@ -61,6 +62,7 @@ function Layout() {
             <Beyin />
             <Card />
             <Price />
+            {/* <Cards /> */}
             <Work />
             <Footer />
           </>
