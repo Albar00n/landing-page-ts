@@ -12,7 +12,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import MenuIcon from "@material-ui/icons/Menu";
 import Side from "../components/contact/Side";
 import Form from "../components/contact/Form"
-import Image from "next/image";
+
 import Link from "next/link";
 import Navbar from "../components/contact/Nav"
 
