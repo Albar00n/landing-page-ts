@@ -13,12 +13,10 @@ import Footer from "./footer/Footer";
 import * as location from "./json/1055-world-locations.json";
 
 const defaultOptions1 = {
-  loop: true,
-  autoplay: true,
+
+
   animationData: location.default,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
+
 };
 
 function Layout() {
@@ -28,11 +26,7 @@ function Layout() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch("https://jsonplaceholder.typicode.com/posts")
-        .then((response) => response.json())
-        .then((json) => {
-          // console.log(json);
-          setData(json);
+
           setLoading(true);
 
           setTimeout(() => {
@@ -40,14 +34,14 @@ function Layout() {
           }, 1000);
         });
     }, 1000);
-  }, []);
+
 
   return (
     <>
       {!completed ? (
         <>
           {!loading ? (
-            <Lottie options={defaultOptions1} height={200} width={200} />
+            <Lottie options={defaultOptions1} height={100} width={100} />
           ) : (
             <Lottie options={defaultOptions1} />
           )}
