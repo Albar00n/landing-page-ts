@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) =>
           },
           typo:{
             marginTop: '2rem',
-
+            fontFamily: "Poppins",
             fontStyle: 'normal',
             fontWeight: 300,
             fontSize: '36px',

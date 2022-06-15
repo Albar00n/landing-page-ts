@@ -39,6 +39,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     div: {
       width: "100%",
+  boxShadow: '0 1px 70px -20px rgba(0, 0, 0, 0.3)',
+
     },
     div1: {
       display: "flex",
