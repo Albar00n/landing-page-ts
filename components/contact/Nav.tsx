@@ -64,9 +64,9 @@ return (
 		<Toolbar>
 			{/* Logo */}
 			<div style={{ flexGrow: 1 }}>
-				<a href="/">
+				<Link href="/">
 					<Logo />
-				</a>
+				</Link>
 			</div>
 			{isMobile ? (
 				// Icon
