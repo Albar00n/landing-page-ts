@@ -61,7 +61,6 @@ export default function AutoGrid() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-
         {/* <Navbar /> */}
         <Navbar />
         {/*  */}

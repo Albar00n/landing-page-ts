@@ -84,93 +84,96 @@ export default function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [openDrawer, setOpenDrawer] = useState(false);
   return (
-    <div className={classes.div}>
-      <CssBaseline />
-      <Toolbar>
-        {/* Logo */}
-        <div style={{ flexGrow: 1 }}>
-          <Logo />
-        </div>
-        {isMobile ? (
-          // Icon
-          <>
-            <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
-              <List>
-                <ListItem onClick={() => setOpenDrawer(false)}>
-                  <ListItemText>
-                    <Link href="/">
-                      <a className={classes.link}>Home</a>
-                    </Link>
-                  </ListItemText>
-                </ListItem>
-                <ListItem onClick={() => setOpenDrawer(false)}>
-                  <ListItemText>
-                    <Link href="#hero">
-                      <a className={classes.link}>Hero</a>
-                    </Link>
-                  </ListItemText>
-                </ListItem>
-                <ListItem onClick={() => setOpenDrawer(false)}>
-                  <ListItemText>
-                    <Link href="#work">
-                      <a className={classes.link}>How it works</a>
-                    </Link>
-                  </ListItemText>
-                </ListItem>
-                <ListItem onClick={() => setOpenDrawer(false)}>
-                  <ListItemText>
-                    <Link href="#features">
-                      <a className={classes.link}>Features</a>
-                    </Link>
-                  </ListItemText>
-                </ListItem>
-                <ListItem onClick={() => setOpenDrawer(false)}>
-                  <ListItemText>
-                    <Link href="#price">
-                      <a className={classes.link}>Prices</a>
-                    </Link>
-                  </ListItemText>
-                </ListItem>
-              </List>
-            </Drawer>
-            <IconButton
-              onClick={() => setOpenDrawer(!openDrawer)}
-              // className={style.icon}
-            >
-              <MenuIcon />
-            </IconButton>
-          </>
-        ) : (
-          <div className={classes.div1}>
-            <div className={classes.div2}>
-              <Link href="/">
-                <a className={classes.link}>Home</a>
-              </Link>
-              <Link href="#hero">
-                <a className={classes.link}>About</a>
-              </Link>
-              <Link href="#work">
-                <a className={classes.link}>How it works</a>
-              </Link>
-              <Link href="#features">
-                <a className={classes.link}>Features</a>
-              </Link>
-              <Link href="#price">
-                <a className={classes.link}>Prices</a>
-              </Link>
-            </div>
-            <div className={classes.button}>
-              <Link href="https://ebcdb.beyin.me/signup">
-                <a className={classes.get}>Get Started</a>
-              </Link>
+		<div className={classes.div}>
+			<CssBaseline />
+			<Toolbar>
+				{/* Logo */}
+				<div style={{ flexGrow: 1 }}>
+					<a href="/">
 
-              <Link href="#">
-                <a className={classes.log}>Login</a>
-              </Link>
-            </div>
-          </div>
-        )}
-      </Toolbar>
-    </div>
-  );
+						<Logo />
+					</a>
+				</div>
+				{isMobile ? (
+					// Icon
+					<>
+						<Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
+							<List>
+								<ListItem onClick={() => setOpenDrawer(false)}>
+									<ListItemText>
+										<Link href="/">
+											<a className={classes.link}>Home</a>
+										</Link>
+									</ListItemText>
+								</ListItem>
+								<ListItem onClick={() => setOpenDrawer(false)}>
+									<ListItemText>
+										<Link href="#hero">
+											<a className={classes.link}>About</a>
+										</Link>
+									</ListItemText>
+								</ListItem>
+								<ListItem onClick={() => setOpenDrawer(false)}>
+									<ListItemText>
+										<Link href="#work">
+											<a className={classes.link}>How it works</a>
+										</Link>
+									</ListItemText>
+								</ListItem>
+								<ListItem onClick={() => setOpenDrawer(false)}>
+									<ListItemText>
+										<Link href="#features">
+											<a className={classes.link}>Features</a>
+										</Link>
+									</ListItemText>
+								</ListItem>
+								<ListItem onClick={() => setOpenDrawer(false)}>
+									<ListItemText>
+										<Link href="#price">
+											<a className={classes.link}>Prices</a>
+										</Link>
+									</ListItemText>
+								</ListItem>
+							</List>
+						</Drawer>
+						<IconButton
+							onClick={() => setOpenDrawer(!openDrawer)}
+							// className={style.icon}
+						>
+							<MenuIcon />
+						</IconButton>
+					</>
+				) : (
+					<div className={classes.div1}>
+						<div className={classes.div2}>
+							<Link href="/">
+								<a className={classes.link}>Home</a>
+							</Link>
+							<Link href="#hero">
+								<a className={classes.link}>About</a>
+							</Link>
+							<Link href="#work">
+								<a className={classes.link}>How it works</a>
+							</Link>
+							<Link href="#features">
+								<a className={classes.link}>Features</a>
+							</Link>
+							<Link href="#price">
+								<a className={classes.link}>Prices</a>
+							</Link>
+						</div>
+						<div className={classes.button}>
+							<Link href="https://ebcdb.beyin.me/signup">
+								<a className={classes.get}>Get Started</a>
+							</Link>
+
+							<Link href="#">
+								<a className={classes.log}>Login</a>
+							</Link>
+						</div>
+					</div>
+				)}
+			</Toolbar>
+		</div>
+	);
 }

@@ -147,7 +147,7 @@ const handleSubmit = async (e) => {
                             value={message}
                             type="text"
                             multiline
-                            rows={4}
+                           
                             placeholder="Type your message here"
                             variant="outlined"
                             fullWidth

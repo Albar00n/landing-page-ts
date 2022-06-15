@@ -58,52 +58,52 @@ export default function Navbar(){
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [openDrawer, setOpenDrawer] = useState(false);
-return(
-
-<>
-<CssBaseline />
-<Toolbar>
-  {/* Logo */}
-  <div style={{flexGrow:1}}>
-    <Logo />
-  </div>
-  {isMobile ? (
-    // Icon
-    <>
-          <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
-            <List>
-              <ListItem onClick={() => setOpenDrawer(false)}>
-                <ListItemText>
-                  <Link href="/">
-                    <a>Home</a>
-                  </Link>
-                </ListItemText>
-              </ListItem>
-              </List>
-              </Drawer>
-              <IconButton
-        onClick={() => setOpenDrawer(!openDrawer)}
-        // className={style.icon}
-      >
-        <MenuIcon />
-      </IconButton>
-              </>
-  ) : (
-    <div>
-       <Link href="/">
-        <a className={classes.link}>Home</a>
-      </Link>
-      <Link href="/">
-                      <a className={classes.get}>Gest Started</a>
-                    </Link>
-            <Link href="https://ebcdb.beyin.me/signup">
-                      <a className={classes.log}>Login</a>
-            </Link>
-    </div>
-  )}
-</Toolbar>
-</>
-
-)
+return (
+	<>
+		<CssBaseline />
+		<Toolbar>
+			{/* Logo */}
+			<div style={{ flexGrow: 1 }}>
+				<a href="/">
+					<Logo />
+				</a>
+			</div>
+			{isMobile ? (
+				// Icon
+				<>
+					<Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
+						<List>
+							<ListItem onClick={() => setOpenDrawer(false)}>
+								<ListItemText>
+									<Link href="/">
+										<a>Home</a>
+									</Link>
+								</ListItemText>
+							</ListItem>
+						</List>
+					</Drawer>
+					<IconButton
+						onClick={() => setOpenDrawer(!openDrawer)}
+						// className={style.icon}
+					>
+						<MenuIcon />
+					</IconButton>
+				</>
+			) : (
+				<div>
+					<Link href="/">
+						<a className={classes.link}>Home</a>
+					</Link>
+					<Link href="/">
+						<a className={classes.get}>Gest Started</a>
+					</Link>
+					<Link href="https://ebcdb.beyin.me/signup">
+						<a className={classes.log}>Login</a>
+					</Link>
+				</div>
+			)}
+		</Toolbar>
+	</>
+);
 
 }
