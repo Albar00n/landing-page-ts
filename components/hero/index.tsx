@@ -14,9 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
         textAlign: 'left',
         margin: '2rem auto',
 
-        // '@media only screen and (min-width: 1200px)': {
-        //       width: '90%'
-        //   },
+
       },
     link: {
             textDecoration: "none",
@@ -34,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
             lineHeight: '54px',
             width: '80%',
             "@media only screen and (max-width: 600px)":{
-                width: '110%',
+                width: '100%',
 
             },
           },
@@ -58,7 +56,7 @@ const useStyles = makeStyles((theme: Theme) =>
           },
           video :{
             width: '100%',
-            height:'100%',
+            height:'99%',
             filter: 'drop-shadow(0px 104px 134px rgba(0, 0, 0, 0.11))',
             borderRadius: '50px',
             // "@media only screen and (max-width: 600px)":{
@@ -74,17 +72,17 @@ const useStyles = makeStyles((theme: Theme) =>
             },
           grid: {
             height: '100%',
-            width:'90%',
-            display:'block'
-            // "@media only screen and (max-width: 600px)":{
-            //     height: '100%',
-            //     width: '100%',
-            //     borderRadius: '10px',
-            //     display:'flex',
-            //     alignItems: 'center',
-            //     justifyContent: 'flex-end',
-            //     margin: '2rem 0rem',
-            // }
+            width:'100%',
+
+            "@media only screen and (max-width: 600px)":{
+                // height: '100%',
+                // width: '100%',
+                borderRadius: '10px',
+                display:'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-end',
+                // margin: '2rem 0rem',
+            }
           }
 }));
 
@@ -133,6 +131,7 @@ const classes = useStyles();
               autoPlay
               src="./video.mp4"
               className={classes.video}
+              // alt="video Beyin"
             />
           </Grid>
         </Grid>

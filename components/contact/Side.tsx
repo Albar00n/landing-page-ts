@@ -11,7 +11,7 @@ import Logo from "../logo/whiteLogo";
 function Side() {
   return (
     <div style={{ position: "relative", height: "100vh" }}>
-      <Image src={bgImage} alt="" layout="fill" width={400} />
+      <Image src={bgImage} alt="Beyin Logo" layout="fill" width={400} />
       <div
         style={{
           position: "relative",

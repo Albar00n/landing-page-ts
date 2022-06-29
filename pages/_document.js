@@ -8,8 +8,7 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					{/* Not exactly required, but this is the PWA primary color */}
-					{/* <meta name="theme-color" content={theme.palette.primary.main} /> */}
+						<title>Beyin</title>
 				</Head>
 				<body>
 					<Main />

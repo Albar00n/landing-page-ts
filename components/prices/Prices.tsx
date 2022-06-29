@@ -61,7 +61,7 @@ const useStyles = makeStyles(() => ({
     fontSize: "17px",
     lineHeight: "115%",
     "@media only screen and (max-width: 800px)": {
-      width: "90%",
+      width: "100%",
       marginLeft: "2rem",
     },
   },
